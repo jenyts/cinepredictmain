@@ -1560,8 +1560,7 @@ class CinePredicta:
                 
                 print("Your Bookings:")
                 for i, booking in enumerate(bookings, 1):
-                    print(f"{i}. Booking ID: {booking['id']} - {booking['movie_title']} at {booking['theatre_name']}")
-                
+                    print(f"{i}. {self.current_user['username']}'s booking - {booking['movie_title']} at {booking['theatre_name']} ({booking['show_time']})")                
                 try:
                     booking_choice = input("\nSelect booking number (or 'back' to return): ")
                     if booking_choice.lower() == 'back':
